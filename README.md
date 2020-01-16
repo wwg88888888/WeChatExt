@@ -26,9 +26,13 @@ WeChatPC：2.8.0.112
 4、Hook功能实现：[pcWeChat](https://github.com/codeByDog/pcWechat.git)
 #### 说明
 非常感谢[codeByDog](https://github.com/codeByDog)开源的此项目，让我能够接触到逆向相关的知识。
+
 [codeByDog](https://github.com/codeByDog)联系方式：
+
 QQ：50728123
+
 交流群：810420984
+
 微信：codeByDog
 
 # 功能列表
