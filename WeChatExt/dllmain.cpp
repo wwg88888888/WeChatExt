@@ -32,3 +32,12 @@ DWORD WINAPI ThreadProc(_In_ HMODULE hModule)
 	InitWebSocket();
 	return true;
 }
+
+
+/*
+ * 说明：此项目中关于微信hook功能的实现代码来自codeByDog开源的pcWechat项目，非常感谢codeByDog。
+ * 作者QQ：50728123
+ * 交流群：810420984
+ * 微信：codeByDog
+ * Git：https://github.com/codeByDog/pcWechat.git
+*/

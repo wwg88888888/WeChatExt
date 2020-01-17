@@ -2,7 +2,8 @@
 #include "Command.h"
 #include "WSClient.h"
 #include "Util.h"
-
+#include "Sql.h"
+#include "ChatRecord.h"
 
 bool isHook = false;
 /**
@@ -22,6 +23,9 @@ void InitWeChat() {
 	{
 		if (IsWxVersionValid()) {
 
+			HookDB();
+
+			HookChatRecord();
 
 			isHook = true;
 

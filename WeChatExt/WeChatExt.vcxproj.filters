@@ -19,6 +19,27 @@
     <Filter Include="初始化">
       <UniqueIdentifier>{7f2e4d57-d725-4dfe-98c5-e4f28e0bcff4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="登录退出">
+      <UniqueIdentifier>{02d0385f-a28c-45f8-9fc4-ac9797bde7be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="发送消息">
+      <UniqueIdentifier>{a3b5e89b-8f45-4ca4-9843-5372a22bd538}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="个人信息">
+      <UniqueIdentifier>{90348be9-fae8-4432-93a9-4e82e7a91df3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="群组相关">
+      <UniqueIdentifier>{e0348204-bf56-459b-af42-322b3ed76e15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="数据库">
+      <UniqueIdentifier>{50411e59-d143-4991-b974-2980f9d1df9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="联系人">
+      <UniqueIdentifier>{bd878614-3bc7-4be7-829e-806b9cd1f36d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="消息处理">
+      <UniqueIdentifier>{b30b6151-37ec-49ee-bdba-69bd514d1859}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -54,6 +75,27 @@
     <ClInclude Include="WSClient.h">
       <Filter>公共函数</Filter>
     </ClInclude>
+    <ClInclude Include="Login.h">
+      <Filter>登录退出</Filter>
+    </ClInclude>
+    <ClInclude Include="SendMsg.h">
+      <Filter>发送消息</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInfo.h">
+      <Filter>个人信息</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatRoom.h">
+      <Filter>群组相关</Filter>
+    </ClInclude>
+    <ClInclude Include="Sql.h">
+      <Filter>数据库</Filter>
+    </ClInclude>
+    <ClInclude Include="ContactList.h">
+      <Filter>联系人</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatRecord.h">
+      <Filter>消息处理</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -79,6 +121,27 @@
     </ClCompile>
     <ClCompile Include="WSClient.cpp">
       <Filter>公共函数</Filter>
+    </ClCompile>
+    <ClCompile Include="Login.cpp">
+      <Filter>登录退出</Filter>
+    </ClCompile>
+    <ClCompile Include="SendMsg.cpp">
+      <Filter>发送消息</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInfo.cpp">
+      <Filter>个人信息</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatRoom.cpp">
+      <Filter>群组相关</Filter>
+    </ClCompile>
+    <ClCompile Include="Sql.cpp">
+      <Filter>数据库</Filter>
+    </ClCompile>
+    <ClCompile Include="ContactList.cpp">
+      <Filter>联系人</Filter>
+    </ClCompile>
+    <ClCompile Include="ChatRecord.cpp">
+      <Filter>消息处理</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

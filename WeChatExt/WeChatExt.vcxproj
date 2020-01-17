@@ -72,16 +72,16 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\Program Files\boost_1_72_0;..\WeChatExt;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Program Files\boost_1_72_0\lib32-msvc-14.2;$(LibraryPath)</LibraryPath>
+    <IncludePath>I:\Program Files\boost_1_72_0;..\WeChatExt;$(IncludePath)</IncludePath>
+    <LibraryPath>I:\Program Files\boost_1_72_0\lib32-msvc-14.2;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>D:\Program Files\boost_1_72_0;..\WeChatExt;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Program Files\boost_1_72_0\lib32-msvc-14.2;$(LibraryPath)</LibraryPath>
+    <IncludePath>I:\Program Files\boost_1_72_0;..\WeChatExt;$(IncludePath)</IncludePath>
+    <LibraryPath>I:\Program Files\boost_1_72_0\lib32-msvc-14.2;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -156,25 +156,39 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ChatRecord.h" />
+    <ClInclude Include="ChatRoom.h" />
     <ClInclude Include="cJSON.h" />
     <ClInclude Include="CJsonObject.hpp" />
     <ClInclude Include="Command.h" />
+    <ClInclude Include="ContactList.h" />
     <ClInclude Include="EVString.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="Init.h" />
     <ClInclude Include="Loger.h" />
+    <ClInclude Include="Login.h" />
     <ClInclude Include="offset.h" />
+    <ClInclude Include="SendMsg.h" />
+    <ClInclude Include="Sql.h" />
     <ClInclude Include="struct.h" />
+    <ClInclude Include="UserInfo.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="WSClient.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ChatRecord.cpp" />
+    <ClCompile Include="ChatRoom.cpp" />
     <ClCompile Include="cJSON.c" />
     <ClCompile Include="CJsonObject.cpp" />
+    <ClCompile Include="ContactList.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="EVString.cpp" />
     <ClCompile Include="Init.cpp" />
     <ClCompile Include="Loger.cpp" />
+    <ClCompile Include="Login.cpp" />
+    <ClCompile Include="SendMsg.cpp" />
+    <ClCompile Include="Sql.cpp" />
+    <ClCompile Include="UserInfo.cpp" />
     <ClCompile Include="Util.cpp" />
     <ClCompile Include="WSClient.cpp" />
   </ItemGroup>

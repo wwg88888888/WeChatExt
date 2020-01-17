@@ -80,16 +80,6 @@ BOOL IsWxVersionValid()
 	return FALSE;
 }
 
-/**
- * ¼ì²éÎ¢ÐÅµÇÂ¼×´Ì¬
- * @param
- * @return bool
- */
-bool CheckLogin()
-{
-	return (int)*(int*)(GetWeChatWinBase() + ISLOGIN) == 1;
-}
-
 
 /**
  * ±àÂë×ª»»
@@ -115,16 +105,13 @@ char* UnicodeToUtf8(const wchar_t* unicode)
 */
 wchar_t* UTF8ToUnicode(const char* str)
 {
-	int    textlen = 0;
+	int textlen = 0;
 	wchar_t* result;
 	textlen = MultiByteToWideChar(CP_UTF8, 0, str, -1, NULL, 0);
 	result = (wchar_t*)malloc((textlen + 1) * sizeof(wchar_t));
-	if (result != 0)
-	{
-		memset(result, 0, (textlen + 1) * sizeof(wchar_t));
-	}
+	memset(result, 0, (textlen + 1) * sizeof(wchar_t));
 	MultiByteToWideChar(CP_UTF8, 0, str, -1, (LPWSTR)result, textlen);
-	return    result;
+	return result;
 }
 
 
@@ -164,7 +151,7 @@ wchar_t* StrToWchar(std::string str)
 }
 
 
-/** 
+/**
  * ´´½¨Ä¿Â¼
  * @param const char* dir
  * @return void

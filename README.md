@@ -24,6 +24,8 @@ WeChatPC：2.8.0.112
 3、WebSocket Server:[Fleck](https://github.com/statianzo/Fleck.git)
 
 4、Hook功能实现：[pcWeChat](https://github.com/codeByDog/pcWechat.git)
+
+5、EVString：[EVlib](https://gitee.com/evilbeast/EVlib)
 ##### 说明
 非常感谢[codeByDog](https://github.com/codeByDog)开源的此项目，让我能够接触到逆向相关的知识。
 

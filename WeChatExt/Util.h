@@ -18,14 +18,7 @@ DWORD GetWeChatWinBase();
  * @return BOOL
 */
 BOOL IsWxVersionValid();
-
-/**
- * ¼ì²éÎ¢ÐÅµÇÂ¼×´Ì¬
- * @param
- * @return bool
- */
-bool CheckLogin();
-
+ 
 /**
  * ±àÂë×ª»»
  * @param const wchar_t* unicode

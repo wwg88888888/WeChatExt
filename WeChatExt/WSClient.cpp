@@ -6,6 +6,13 @@
 #include "Init.h"
 #include "Util.h" 
 #include "EVString.h"
+#include "Login.h"
+#include "ContactList.h"
+#include "ChatRecord.h"
+#include "ChatRoom.h"
+#include "Sql.h"
+#include "SendMsg.h"
+#include "UserInfo.h"
 
 using namespace std;
 
@@ -137,33 +144,54 @@ void RecvMessage(client* wsclient, websocketpp::connection_hdl hdl, message_ptr 
 			Send(Cmd_CheckLoginStatus, respons, callback);
 			break;
 		case Cmd_GetUser://获取用户信息
-			if (!CheckLogin()) {
-				Send(Cmd_GetUser, respons, callback, 1, L"微信还未登录，不能获取用户信息。");
-				break;
+			if (CheckLogin()) {
+				GetUser(callback);
 			}
-
-			Send(Cmd_GetUser, respons, callback);
+			else
+			{
+				Send(Cmd_GetUser, respons, callback, 1, L"当前微信还未登录。");
+			}
 			break;
-		case Cmd_FriendLists:
-
-			Send(Cmd_FriendLists, respons, callback);
-			break;
-		case Cmd_ChatRoomLists:
-			Send(Cmd_ChatRoomLists, respons, callback);
-			break;
-		case Cmd_PatchWeChat:
-			Send(Cmd_PatchWeChat, respons, callback);
+		case Cmd_ContactList:
+			GetContactList();
 			break;
 		case Cmd_SendTextMessage:
+			SendTextMsg(EVString::a2w("WxId"), EVString::a2w("Message"));
 			break;
 		case Cmd_SendFileMessage:
+			SendAttachMsg(EVString::a2w("WxId"), EVString::a2w("FilePath"));
 			break;
 		case Cmd_SendImageMessage:
+			SendImageMsg(EVString::a2w("WxId"), EVString::a2w("FilePath"));
 			break;
 		case Cmd_SendAtMsg:
+			SendChatroomAtMsg(EVString::a2w("ChatRoomId"), EVString::a2w("MemberId"), EVString::a2w("MemberNick"), EVString::a2w("Message"));
+			break;
+		case Cmd_SendXmlCard:
+			SendXmlCard(EVString::a2w("RecverWxid"), EVString::a2w("XML"));
+			break;
+		case Cmd_SendXmlArticle:
+			SendXmlArticle(EVString::a2w("RecverWxid"), EVString::a2w("FromWxId"), EVString::a2w("XML"));
 			break;
 		case Cmd_SetRoomName:
+			SetChatoomName(EVString::a2w("ChatRoomId"), EVString::a2w("ChatRoomName"));
 			break;
+		case Cmd_SetChatRoomAnnouncement:
+			SetChatroomAnnouncement(EVString::a2w("ChatRoomId"), EVString::a2w("Announcement"));
+			break;
+		case Cmd_AddChatRoomMember:
+			AddChatroomMember(EVString::a2w("ChatRoomId"), EVString::a2w("Wxid"));
+			break;
+		case Cmd_DeleteChatRoomMember:
+			DeleteChatroomMember(EVString::a2w("ChatRoomId"), EVString::a2w("MemberWxId"));
+			break;
+		case Cmd_GetChatRoomMember:
+			GetChatroomUser(EVString::a2w("ChatRoomId"), callback);
+			break;
+		case Cmd_QuitChatRoom:
+			QuitChatRoom(EVString::a2w("ChatRoomId"));
+			break;
+
 		}
 		json.Clear();
 	}

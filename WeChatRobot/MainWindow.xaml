@@ -30,12 +30,12 @@
         </GroupBox>
 
         <GroupBox Header="联系人" Grid.Row="1">
-            <DataGrid  Margin="6,0"  Grid.Row="1" CanUserSortColumns="True"  CanUserAddRows="False"   ItemsSource="{Binding MallChatRooms}" AutoGenerateColumns="False" IsReadOnly="True" Background="White"  VerticalScrollBarVisibility="Auto">
+            <DataGrid  Margin="6,0"  Grid.Row="1" CanUserSortColumns="True"  CanUserAddRows="False"   ItemsSource="{Binding Contacts}" AutoGenerateColumns="False" IsReadOnly="True" Background="White"  VerticalScrollBarVisibility="Auto">
                 <DataGrid.Columns>
-                    <DataGridTextColumn  Header="Wxid" Width="80"  Binding="{Binding RoomId}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="账号" Width="80" Binding="{Binding RoomName}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="昵称" Width="80" Binding="{Binding MallName}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="签名" Width="*" Binding="{Binding MallName}"></DataGridTextColumn>
+                    <DataGridTextColumn  Header="UserName" Width="80"  Binding="{Binding UserName}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="NickName" Width="80" Binding="{Binding NickName}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Remark" Width="80" Binding="{Binding Remark}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="BigHeadImgUrl" Width="*" Binding="{Binding BigHeadImgUrl}"></DataGridTextColumn>
                 </DataGrid.Columns>
             </DataGrid>
 
@@ -65,6 +65,7 @@
                     <StackPanel Orientation="Horizontal">
                         <ComboBox Width="200" x:Name="cm_DbList"></ComboBox>
                         <Button Content="执行Sql" x:Name="btn_RunSql" Width="80" Margin="2"></Button>
+                        <Button Content="获取数据库句柄" x:Name="btn_GetDb" Width="100" Margin="2"></Button>
                     </StackPanel>
                     <TextBox TextWrapping="Wrap" Height="60" x:Name="tb_Sql"></TextBox>
                 </StackPanel>
